@@ -44,6 +44,7 @@
 	</script>
 
     <div id="navigation"></div>
+    
     <!-- SPA THERAPIST FORM -->
     <section id="spaTherapistForm">
         <div>
@@ -89,15 +90,15 @@
 
                             <h5 class="mb-0 mt-4 px-4">Appointment Date & Time:</h5>
                             <div class="dateTime px-2 mb-4">
-                                <div class="date col-sm-6">
+                                <div class="date col-sm-6 px-2">
                                     <label for="date" class="form-label">Date</label>
                                     <input type="date" id="date" class="form-control" required>
                                     <div class="invalid-feedback">
                                         Please select a valid date.
                                     </div>
                                 </div>
-                                <div class="col-sm-6 px-2">
-                                    <div class="time">
+                                <div class="col-sm-6">
+                                    <div class="time px-2">
                                         <label for="time" class="form-label mt-1">Time</label>
                                         <select class="form-select" id="time" required>
                                             <option value="">Please select your preferred time</option>
@@ -135,7 +136,6 @@
                                     <label for="country" class="form-label">Choose your preferred spa therapist</label>
                                     <select class="form-select" id="country" required="">
                                         <option value="">Select your preferred therapist</option>
-
                                         <!-- <option value="Chenga Lhamo">Chenga Lhamo</option>
                                         <option value="Dawa Choden">Dawa Choden</option>
                                         <option value="Dochen">Dochen</option>
@@ -182,7 +182,7 @@
     </section>
     
 <!-- END-BOOK-THERAPIST -->
-<div id="footer"></div>     
+<div id="footer"></div>    
 
 <script>
     // Function to validate form fields
@@ -192,8 +192,12 @@
 
         // Check if all required fields are filled
         Array.from(form.elements).forEach(function(element) {
-            if (element.required && element.value === "") {
+            if (element.required && element.value.trim() === "") {
                 element.classList.add("is-invalid");
+                var errorElement = document.getElementById(element.id + "Error");
+                if (errorElement) {
+                    errorElement.style.display = "inline";
+                }
                 isValid = false;
             }
         });
@@ -202,7 +206,15 @@
         var ageConfirmation = document.getElementById("ageConfirmation");
         if (!ageConfirmation.checked) {
             ageConfirmation.classList.add("is-invalid");
+            var ageErrorElement = document.getElementById("ageError");
+            if (ageErrorElement) {
+                ageErrorElement.style.display = "inline";
+            }
             isValid = false;
+        }
+
+        if (!isValid) {
+            alert("Please fill all the required fields and confirm your age.");
         }
 
         return isValid;
@@ -212,7 +224,7 @@
     function generateWhatsAppMessage() {
         var therapist = document.getElementById("country").value;
         var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
-
+        
         return message;
     }
 
@@ -250,12 +262,19 @@
             if (therapistWhatsAppNumbers.hasOwnProperty(therapist)) {
                 var therapistWhatsAppNumber = therapistWhatsAppNumbers[therapist];
                 // Open WhatsApp link with prefilled message
-                window.open("https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message), "_blank");
+                var url = "https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message);
+
+                // Check if it's being opened on a desktop or a web browser
+                if (navigator.platform.toUpperCase().indexOf('MAC') >= 0 || navigator.platform.toUpperCase().indexOf('WIN') >= 0) {
+                    // Open WhatsApp desktop app
+                    window.location.href = url;
+                } else {
+                    // Open WhatsApp web
+                    window.open(url, "_blank");
+                }
             } else {
                 alert("Selected therapist does not have a WhatsApp number.");
             }
-        } else {
-            alert("Please fill all the required fields and confirm age.");
         }
     }
 
@@ -267,13 +286,17 @@
 
     // Event listener for form inputs change
     document.getElementById("bookingForm").addEventListener("change", function() {
-        // Remove 'is-invalid' class when user starts typing
+        // Remove 'is-invalid' class and hide error messages when user starts typing
         this.querySelectorAll(".is-invalid").forEach(function(element) {
             element.classList.remove("is-invalid");
+            var errorElement = document.getElementById(element.id + "Error");
+            if (errorElement) {
+                errorElement.style.display = "none";
+            }
         });
     });
 
-    // Sorting based on specialty 
+    // Sorting based on specialty
     document.addEventListener('DOMContentLoaded', () => {
         var servicesDropdown = document.getElementById('treatment');
         var therapistDropdown = document.getElementById('country');
@@ -303,7 +326,7 @@
 
         servicesDropdown.addEventListener('change', () => {
             var selectedService = servicesDropdown.value;
-            therapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
+            therapistDropdown.innerHTML = '<option value="" class="therapists">--Therapist available based on the selected treatment--</option>';
 
             var filteredTherapists = therapists.filter(therapist => therapist.speciality === selectedService);
 

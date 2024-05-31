@@ -1394,6 +1394,10 @@ display: flex;
     #spaTherapistForm .blankForm{
       display: block;
     }
+  }  
+
+  .therapists{
+    color: red;
   }
 /* END-BOOK-THERAPIST */
 
