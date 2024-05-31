@@ -185,138 +185,136 @@
 <div id="footer"></div>     
 
 <script>
-        // Function to validate form fields
-        function validateForm() {
-            var isValid = true;
-            var form = document.getElementById("bookingForm");
+    // Function to validate form fields
+    function validateForm() {
+        var isValid = true;
+        var form = document.getElementById("bookingForm");
 
-            // Check if all required fields are filled
-            Array.from(form.elements).forEach(function(element) {
-                if (element.required && element.value === "") {
-                    element.classList.add("is-invalid");
-                    isValid = false;
-                }
-            });
-
-            // Check if age confirmation checkbox is checked
-            var ageConfirmation = document.getElementById("ageConfirmation");
-            if (!ageConfirmation.checked) {
-                ageConfirmation.classList.add("is-invalid");
+        // Check if all required fields are filled
+        Array.from(form.elements).forEach(function(element) {
+            if (element.required && element.value === "") {
+                element.classList.add("is-invalid");
                 isValid = false;
             }
+        });
 
-            return isValid;
+        // Check if age confirmation checkbox is checked
+        var ageConfirmation = document.getElementById("ageConfirmation");
+        if (!ageConfirmation.checked) {
+            ageConfirmation.classList.add("is-invalid");
+            isValid = false;
         }
 
-        // Function to generate WhatsApp message
-        function generateWhatsAppMessage() {
-            var therapist = document.getElementById("country").value;
-            var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
+        return isValid;
+    }
 
-            return message;
-        }
+    // Function to generate WhatsApp message
+    function generateWhatsAppMessage() {
+        var therapist = document.getElementById("country").value;
+        var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
 
-        // Function to submit the form
-        function submitForm() {
-            if (validateForm()) {
-                var therapist = document.getElementById("country").value;
-                var message = generateWhatsAppMessage();
+        return message;
+    }
 
-                // Assuming each therapist's WhatsApp number is stored in an object
-                var therapistWhatsAppNumbers = {
-                    "Changa Lhamo": "97517919089",
-                    "Dawa Choden": "97517953183",
-                    "Dochen": "97517454107",
-                    "Dorji Wangda": "97517858542",
-                    "Kinley Pem": "97577290825",
-                    "Kinley Wangmo": "97517580753",
-                    "Kuenga Yuden": "97517708053",
-                    "Leki Wangmo": "97517943608",
-                    "Nima Lhadon": "97517901743",
-                    "Pema Tshering": "97517423065",
-                    "Tashi Dorji": "97577301268",
-                    "Thinley Wangmo": "97577861930",
-                    "Tshomo Tshomo": "97517624883",
-                    "Tshering Lham": "97517859177",
-                    "Wangchuk Dema": "97517941831",
-                    "Yangka Dem": "97517265521",
-                    "Yoenten": "97517265521",
-                    "Yeshi Choden": "97517452149",
-                    "Yeshi Dema": "97517684320",
-                    "You Raj Suberi": "97517419575",
-                     // Ensure all therapists have a WhatsApp number
-                };
+    // Function to submit the form
+    function submitForm() {
+        if (validateForm()) {
+            var therapist = document.getElementById("country").value.trim(); // Trim whitespace
+            var message = generateWhatsAppMessage();
 
-                // Check if the selected therapist has a WhatsApp number
-                if (therapistWhatsAppNumbers.hasOwnProperty(therapist)) {
-                    var therapistWhatsAppNumber = therapistWhatsAppNumbers[therapist];
-                    // Open WhatsApp link with prefilled message
-                    window.open("https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message), "_blank");
-                } else {
-                    alert("Selected therapist does not have a WhatsApp number.");
-                }
+            // Assuming each therapist's WhatsApp number is stored in an object
+            var therapistWhatsAppNumbers = {
+                "Changa Lhamo": "97517919089",
+                "Dawa Choden": "97517953183",
+                "Dochen": "97517454107",
+                "Dorji Wangda": "97517858542",
+                "Kinley Pem": "97577290825",
+                "Kinley Wangmo": "97517580753",
+                "Kuenga Yuden": "97517708053",
+                "Leki Wangmo": "97517943608",
+                "Nima Lhadon": "97517901743",
+                "Pema Tshering": "97517423065",
+                "Tashi Dorji": "97577301268",
+                "Thinley Wangmo": "97577861930",
+                "Tshomo Tshomo": "97517624883",
+                "Tshering Lham": "97517859177",
+                "Wangchuk Dema": "97517941831",
+                "Yangka Dem": "97517265521",
+                "Yoenten": "97517265521",
+                "Yeshi Choden": "97517452149",
+                "Yeshi Dema": "97517684320",
+                "You Raj Suberi": "97517419575"
+            };
+
+            // Check if the selected therapist has a WhatsApp number
+            if (therapistWhatsAppNumbers.hasOwnProperty(therapist)) {
+                var therapistWhatsAppNumber = therapistWhatsAppNumbers[therapist];
+                // Open WhatsApp link with prefilled message
+                window.open("https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message), "_blank");
             } else {
-                alert("Please fill all the required fields and confirm age.");
+                alert("Selected therapist does not have a WhatsApp number.");
             }
+        } else {
+            alert("Please fill all the required fields and confirm age.");
         }
+    }
 
-        // Event listener for form submission
-        document.getElementById("submitButton").addEventListener("click", function(event) {
-            event.preventDefault();
-            submitForm();
+    // Event listener for form submission
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+        event.preventDefault();
+        submitForm();
+    });
+
+    // Event listener for form inputs change
+    document.getElementById("bookingForm").addEventListener("change", function() {
+        // Remove 'is-invalid' class when user starts typing
+        this.querySelectorAll(".is-invalid").forEach(function(element) {
+            element.classList.remove("is-invalid");
         });
+    });
 
-        // Event listener for form inputs change
-        document.getElementById("bookingForm").addEventListener("change", function() {
-            // Remove 'is-invalid' class when user starts typing
-            this.querySelectorAll(".is-invalid").forEach(function(element) {
-                element.classList.remove("is-invalid");
+    // Sorting based on specialty 
+    document.addEventListener('DOMContentLoaded', () => {
+        var servicesDropdown = document.getElementById('treatment');
+        var therapistDropdown = document.getElementById('country');
+
+        var therapists = [
+            { name: 'Changa Lhamo', speciality: 'Thai massage' },
+            { name: 'Dawa Choden', speciality: 'Head massage' },
+            { name: 'Dochen', speciality: 'Thai massage' },
+            { name: 'Dorji Wangda', speciality: 'Swedish massage' },
+            { name: 'Kinley Pem', speciality: 'Head massage' },
+            { name: 'Kinley Wangmo', speciality: 'Head massage' },
+            { name: 'Kuenga Yuden', speciality: 'Head massage' },
+            { name: 'Leki Wangmo', speciality: 'Baby massage' },
+            { name: 'Nima Lhadon', speciality: 'Swedish massage' },
+            { name: 'Pema Tshering', speciality: 'Foot massage' },
+            { name: 'Tashi Dorji', speciality: 'Foot massage' },
+            { name: 'Thinley Wangmo', speciality: 'Swedish massage' },
+            { name: 'Tshomo Tshomo', speciality: 'Thai massage' },
+            { name: 'Tshering Lham', speciality: 'Head massage' },
+            { name: 'Wangchuk Dema', speciality: 'Baby massage' },
+            { name: 'Yangka Dem', speciality: 'Thai massage' },
+            { name: 'Yoenten', speciality: 'Foot massage' },
+            { name: 'Yeshi Choden', speciality: 'Shoulder massage' },
+            { name: 'Yeshi Dema', speciality: 'Foot massage' },
+            { name: 'You Raj Suberi', speciality: 'Shoulder massage' }
+        ];
+
+        servicesDropdown.addEventListener('change', () => {
+            var selectedService = servicesDropdown.value;
+            therapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
+
+            var filteredTherapists = therapists.filter(therapist => therapist.speciality === selectedService);
+
+            filteredTherapists.forEach(therapist => {
+                var option = document.createElement('option');
+                option.value = therapist.name;
+                option.textContent = therapist.name;
+                therapistDropdown.appendChild(option);
             });
         });
-
-        // Sorting based on specialty 
-        document.addEventListener('DOMContentLoaded', () => {
-            var servicesDropdown = document.getElementById('treatment');
-            var therapistDropdown = document.getElementById('country');
-
-            var therapist = [
-                { name: 'Changa Lhamo', speciality: 'Thai massage' },
-                { name: 'Dawa Choden', speciality: 'Head massage' },
-                { name: 'Dochen', speciality: 'Thai massage' },
-                { name: 'Dorji Wangda', speciality: 'Swedish massage' },
-                { name: 'Kinley Pem', speciality: 'Head massage' },
-                { name: 'Kinley Wangmo', speciality: 'Head massage' },
-                { name: 'Kuenga Yuden', speciality: 'Head massage' },
-                { name: 'Leki Wangmo', speciality: 'baby massage' },
-                { name: 'Nima Lhadon', speciality: 'Swedish massage' },
-                { name: 'Pema Tshering', speciality: 'Foot massage' },
-                { name: 'Tashi Dorji', speciality: 'Foot massage' },
-                { name: 'Thinley Wangmo', speciality: 'Swedish massage' },
-                { name: 'Tshomo Tshomo', speciality: 'Thai massage' },
-                { name: 'Tshering Lham', speciality: 'Head massage' },
-                { name: 'Wangchuk Dema', speciality: 'baby massage' },
-                { name: 'Yangka Dem', speciality: 'Thai massage' },
-                { name: 'Yoenten', speciality: 'Foot massage' },
-                { name: 'Yeshi Choden', speciality: 'shoulder massage' },
-                { name: 'Yeshi Dema', speciality: 'Foot massage' },
-                { name: 'You Raj Suberi', speciality: 'Shoulder massage' }
-                
-            ];
-
-            servicesDropdown.addEventListener('change', () => {
-                var selectedServices = servicesDropdown.value;
-                therapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
-
-                var filteredTherapists = therapist.filter(therapist => therapist.speciality === selectedServices);
-
-                filteredTherapists.forEach(therapist => {
-                    var option = document.createElement('option');
-                    option.value = therapist.name;
-                    option.textContent = therapist.name;
-                    therapistDropdown.appendChild(option);
-                });
-            });
-        });
-</script>  
+    });
+</script>
 </body>
 </html>
