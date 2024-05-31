@@ -168,7 +168,7 @@
                             <h5 class="mt-5">POLICY</h5>
                             <p class="mb-3">To secure your booking, a 50% advance payment is required. You will then be redirected to a secure WhatsApp Business link for payment through various mobile banking applications. If you cancel the appointment after confirmation, 50% of the deposit will be retained as a cancellation fee.</p>
                             <div class="form-check my-4">
-                                <input id="ageConfirmation" name="paymentMethod" type="checkbox" class="form-check-input" required>
+                                <input id="ageConfirmation" name="ageConfirmation" type="checkbox" class="form-check-input" required>
                                 <label class="form-check-label px-3" for="ageConfirmation">I agree that I am 18 years of age or older.</label>
                             </div>
     
@@ -185,7 +185,7 @@
 <div id="footer"></div>     
 
 <script>
-            // Function to validate form fields
+        // Function to validate form fields
         function validateForm() {
             var isValid = true;
             var form = document.getElementById("bookingForm");
@@ -224,27 +224,27 @@
 
                 // Assuming each therapist's WhatsApp number is stored in an object
                 var therapistWhatsAppNumbers = {
-                            "Chenga Lhamo": "+97517919089",
-                            "Dawa Choden": "+97517953183",
-                            "Dochen": "+97517454107",
-                            "Dorji Wangda": "+97517858542",
-                            "Kinley Pem": "+97577290825",
-                            "Kinley Wangmo": "+97517580753",
-                            "Kuenga Yuden": "+97517708053",
-                            "Leki Wangmo": "+97517943608",
-                            "Nima Lhadon": "+97517901743",
-                            "Pema Tshering": "+97517423065",
-                            "Tashi Dorji": "+97577301268",
-                            "Thinley Wangmo": "+97577861930",
-                            "Tshomo Tshomo": "+97517624883",
-                            "Tshering Lham": "+97517859177",
-                            "Wangchuk Dema": "+97517941831",
-                            "Yangka Dem": "+97517265521",
-                            "Yenton": "+97517265521",
-                            "Yeshi Choden": "+97517452149",
-                            "Yeshi Dema": "+97517684320",
-                            "You Raj Suberi": "+97517419575"
-                    // Add other therapists and their WhatsApp numbers here
+                    "Changa Lhamo": "97517919089",
+                    "Dawa Choden": "97517953183",
+                    "Dochen": "97517454107",
+                    "Dorji Wangda": "97517858542",
+                    "Kinley Pem": "97577290825",
+                    "Kinley Wangmo": "97517580753",
+                    "Kuenga Yuden": "97517708053",
+                    "Leki Wangmo": "97517943608",
+                    "Nima Lhadon": "97517901743",
+                    "Pema Tshering": "97517423065",
+                    "Tashi Dorji": "97577301268",
+                    "Thinley Wangmo": "97577861930",
+                    "Tshomo Tshomo": "97517624883",
+                    "Tshering Lham": "97517859177",
+                    "Wangchuk Dema": "97517941831",
+                    "Yangka Dem": "97517265521",
+                    "Yoenten": "97517265521",
+                    "Yeshi Choden": "97517452149",
+                    "Yeshi Dema": "97517684320",
+                    "You Raj Suberi": "97517419575",
+                     // Ensure all therapists have a WhatsApp number
                 };
 
                 // Check if the selected therapist has a WhatsApp number
@@ -277,42 +277,46 @@
         // Sorting based on specialty 
         document.addEventListener('DOMContentLoaded', () => {
             var servicesDropdown = document.getElementById('treatment');
-            var TherapistDropdown = document.getElementById('country');
+            var therapistDropdown = document.getElementById('country');
 
             var therapist = [
-                { name: 'Changa Lhamo', speciality: 'Swedish massage' },
-                { name: 'Pema Lhazin', speciality: 'Head massage' },
-                { name: 'Yanka Dem', speciality: 'Foot massage' },
-                { name: 'You Raj', speciality: 'Swedish massage' },
-                { name: 'Pema Tshering', speciality: 'Head massage' },
-                { name: 'Kinley Pem', speciality: 'Head massage' },
+                { name: 'Changa Lhamo', speciality: 'Thai massage' },
                 { name: 'Dawa Choden', speciality: 'Head massage' },
-                { name: 'Tashi Dorji', speciality: 'Body massage' },
-                { name: 'Tshering Lham', speciality: 'Swedish massage' },
-                { name: 'Dochen', speciality: 'Foot massage' },
-                { name: 'Leki Wangmo', speciality: 'Foot massage' },
-                { name: 'Wangchuk Dema', speciality: 'Swedish massage' },
-                { name: 'Thinley Wangmo', speciality: 'Body massage' },
-                { name: 'Yoenten', speciality: 'Head massage' },
-                { name: 'Pema Wangda', speciality: 'Foot massage' },
-
+                { name: 'Dochen', speciality: 'Thai massage' },
+                { name: 'Dorji Wangda', speciality: 'Swedish massage' },
+                { name: 'Kinley Pem', speciality: 'Head massage' },
+                { name: 'Kinley Wangmo', speciality: 'Head massage' },
+                { name: 'Kuenga Yuden', speciality: 'Head massage' },
+                { name: 'Leki Wangmo', speciality: 'baby massage' },
+                { name: 'Nima Lhadon', speciality: 'Swedish massage' },
+                { name: 'Pema Tshering', speciality: 'Foot massage' },
+                { name: 'Tashi Dorji', speciality: 'Foot massage' },
+                { name: 'Thinley Wangmo', speciality: 'Swedish massage' },
+                { name: 'Tshomo Tshomo', speciality: 'Thai massage' },
+                { name: 'Tshering Lham', speciality: 'Head massage' },
+                { name: 'Wangchuk Dema', speciality: 'baby massage' },
+                { name: 'Yangka Dem', speciality: 'Thai massage' },
+                { name: 'Yoenten', speciality: 'Foot massage' },
+                { name: 'Yeshi Choden', speciality: 'shoulder massage' },
+                { name: 'Yeshi Dema', speciality: 'Foot massage' },
+                { name: 'You Raj Suberi', speciality: 'Shoulder massage' }
+                
             ];
+
             servicesDropdown.addEventListener('change', () => {
                 var selectedServices = servicesDropdown.value;
-                TherapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
+                therapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
 
-                var filterTherapists = therapist.filter(therapist => therapist.speciality ===selectedServices);
+                var filteredTherapists = therapist.filter(therapist => therapist.speciality === selectedServices);
 
-                filterTherapists.forEach(therapist => {
+                filteredTherapists.forEach(therapist => {
                     var option = document.createElement('option');
                     option.value = therapist.name;
                     option.textContent = therapist.name;
-                    TherapistDropdown.appendChild(option);
+                    therapistDropdown.appendChild(option);
                 });
             });
-
         });
-
 </script>  
 </body>
 </html>
