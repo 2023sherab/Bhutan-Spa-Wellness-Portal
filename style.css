@@ -136,6 +136,16 @@
   @media (max-width: 545px){
     .footer img{
       width: 80px;
+    } 
+  }
+
+  @media (max-width: 500px){
+    .footer .copyright h5{
+      display: flex;
+      text-align: center;  
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-size: 16px;   
     }
   }
 
