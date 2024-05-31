@@ -210,7 +210,7 @@
 
 
 /* BENEFITS*/
-.benefits-heading h1{
+.benefits-heading{
   color: #800E13;
   font-family:"Belleza", sans-serif ;
   text-align: center;
@@ -296,7 +296,7 @@
   position:relative;
   }
 
-  #advertisement h1 .heading{
+  #advertisement .heading{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -350,7 +350,7 @@
 }
 
 .preferred-heading{
-  color: #0e2180;
+  color: #800E13;
   text-align: center;
   font-size: 40px;
   margin-top: 5rem;
@@ -387,7 +387,7 @@
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: height 0.5s ease;
+  transition: height 0.7s ease;
 }
 
 .preferred-container:hover .preferred-overlay {
