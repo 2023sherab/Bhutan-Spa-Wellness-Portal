@@ -1,0 +1,635 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Therapist</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Belleza&display=swap" rel="stylesheet">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="./assets/images/Spa-Logo.png">
+
+</head>
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- <script src="./script.js" charset="UTF-8"></script> -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navbar.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});		
+	</script>
+
+    <div id="navigation"></div>
+    <!-- SPA THERAPIST FORM -->
+    <section id="spaTherapistForm">
+        <div>
+            <main>
+                <div class="py-5 text-center">
+                    <h1>BOOK A THERAPIST</h1>
+                </div>
+    
+                <div class="row g-5">
+                    <div class="col-md-7 form col-lg-8">
+                        <div class="text-left">
+                            <p class="mb-4">To be eligible for appointment booking, users must be at least eighteen (18) years of age, however, spa treatments are only available to those three (3) years of age or older.</p>
+                        </div>
+                        <p class="mb-4">Spa therapist can take up to 1 number of guests at a time.</p>
+                        <form id="bookingForm" class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="blankForm col-sm-12">
+                                    <div class="col-sm-6 px-2">
+                                        <label for="firstName" class="form-label">Your full name:</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Please enter your name" value="" required="">
+                                        <div class="invalid-feedback">
+                                            Valid first name is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 px-2">
+                                        <label for="ageRange" class="form-label">Age range of the one who is availing the service</label>
+                                        <select class="form-select" id="ageRange" required="">
+                                            <option value="">Select your age range</option>
+                                            <option value="6 months-1 year">6 months-1 year</option>
+                                            <option value="2 years-5 years">2 years-5 years</option>
+                                            <option value="6 years-13 years">6 years-13 years</option>
+                                            <option value="14 years-18 years">14 years-18 years</option>
+                                            <option value="19 years-30 years">19 years-30 years</option>
+                                            <option value="31 years-45 years">31 years-45 years</option>
+                                            <option value="Above 46">Above 46</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid age range.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="mb-0 mt-4 px-4">Appointment Date & Time:</h5>
+                            <div class="dateTime px-2 mb-4">
+                                <div class="date col-sm-6">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" id="date" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please select a valid date.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 px-2">
+                                    <div class="time">
+                                        <label for="time" class="form-label mt-1">Time</label>
+                                        <select class="form-select" id="time" required>
+                                            <option value="">Please select your preferred time</option>
+                                            <option value="Morning">Morning</option>
+                                            <option value="Afternoon">Afternoon</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Night">Night</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blankForm col-sm-12">                             
+
+                                <div class="col-sm-6 px-2">
+                                    <label for="treatment" class="form-label">Choose your treatment</label>                               
+                                    <select class="form-select" id="treatment" required="">
+                                        <option value="">Select your treatment</option>
+                                       <option value="Thai massage">Thai massage</option>
+                                        <option value="Swedish massage">Swedish massage</option>
+                                        <option value="Head massage">Head massage</option>
+                                        <option value="Head & shoulder massage">shoulder massage</option>
+                                        <option value="Foot massage">Foot massage</option>
+                                        <option value="Baby massage">Baby massage</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid treatment.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6 px-2">
+                                    <label for="country" class="form-label">Choose your preferred spa therapist</label>
+                                    <select class="form-select" id="country" required="">
+                                        <option value="">Select your preferred therapist</option>
+
+                                        <!-- <option value="Chenga Lhamo">Chenga Lhamo</option>
+                                        <option value="Dawa Choden">Dawa Choden</option>
+                                        <option value="Dochen">Dochen</option>
+                                        <option value="Dorji Wangda">Dorji Wangda</option>
+                                        <option value="Kinley Pem">Kinley Pem</option>
+                                        <option value="Kinley Wangmo">Kinley Wangmo</option>
+                                        <option value="Kuenga Yuden">Kuenga Yuden</option>
+                                        <option value="Leki Wangmo">Leki Wangmo</option>
+                                        <option value="Nima Lhadon">Nima Lhadon</option>
+                                        <option value="Pema Tshering">Pema Tshering</option>
+                                        <option value="Tashi Dorji">Tashi Dorji</option>
+                                        <option value="Thinley Wangmo">Thinley Wangmo</option>
+                                        <option value="Tshomo Tshomo">Tshomo Tshomo</option>
+                                        <option value="Tshering Lham">Tshering Lham</option>
+                                        <option value="Wangchuk Dema">Wangchuk Dema</option>
+                                        <option value="Yangka Dem">Yangka Dem</option>
+                                        <option value="Yenton">Yenton</option>
+                                        <option value="Yeshi Choden">Yeshi Choden</option>
+                                        <option value="Yeshi Dema">Yeshi Dema</option>
+                                        <option value="You Raj Suberi">You Raj Suberi</option> -->
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid therapist.
+                                    </div>
+                                </div>                               
+                            </div>
+
+
+                            <hr class="hr my-5">
+                            <h5 class="mt-5">POLICY</h5>
+                            <p class="mb-3">To secure your booking, a 50% advance payment is required. You will then be redirected to a secure WhatsApp Business link for payment through various mobile banking applications. If you cancel the appointment after confirmation, 50% of the deposit will be retained as a cancellation fee.</p>
+                            <div class="form-check my-4">
+                                <input id="ageConfirmation" name="paymentMethod" type="checkbox" class="form-check-input" required>
+                                <label class="form-check-label px-3" for="ageConfirmation">I agree that I am 18 years of age or older.</label>
+                            </div>
+    
+                            <button type="button" class="btn" id="submitButton">SUBMIT THE FORM & PROCEED WITH THE ADVANCEMENT PAYMENT</button>
+    
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+    
+<!-- END-BOOK-THERAPIST -->
+<div id="footer"></div>     
+
+<script>
+            // Function to validate form fields
+        function validateForm() {
+            var isValid = true;
+            var form = document.getElementById("bookingForm");
+
+            // Check if all required fields are filled
+            Array.from(form.elements).forEach(function(element) {
+                if (element.required && element.value === "") {
+                    element.classList.add("is-invalid");
+                    isValid = false;
+                }
+            });
+
+            // Check if age confirmation checkbox is checked
+            var ageConfirmation = document.getElementById("ageConfirmation");
+            if (!ageConfirmation.checked) {
+                ageConfirmation.classList.add("is-invalid");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Function to generate WhatsApp message
+        function generateWhatsAppMessage() {
+            var therapist = document.getElementById("country").value;
+            var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
+
+            return message;
+        }
+
+        // Function to submit the form
+        function submitForm() {
+            if (validateForm()) {
+                var therapist = document.getElementById("country").value;
+                var message = generateWhatsAppMessage();
+
+                // Assuming each therapist's WhatsApp number is stored in an object
+                var therapistWhatsAppNumbers = {
+                            "Chenga Lhamo": "+97517919089",
+                            "Dawa Choden": "+97517953183",
+                            "Dochen": "+97517454107",
+                            "Dorji Wangda": "+97517858542",
+                            "Kinley Pem": "+97577290825",
+                            "Kinley Wangmo": "+97517580753",
+                            "Kuenga Yuden": "+97517708053",
+                            "Leki Wangmo": "+97517943608",
+                            "Nima Lhadon": "+97517901743",
+                            "Pema Tshering": "+97517423065",
+                            "Tashi Dorji": "+97577301268",
+                            "Thinley Wangmo": "+97577861930",
+                            "Tshomo Tshomo": "+97517624883",
+                            "Tshering Lham": "+97517859177",
+                            "Wangchuk Dema": "+97517941831",
+                            "Yangka Dem": "+97517265521",
+                            "Yenton": "+97517265521",
+                            "Yeshi Choden": "+97517452149",
+                            "Yeshi Dema": "+97517684320",
+                            "You Raj Suberi": "+97517419575"
+                    // Add other therapists and their WhatsApp numbers here
+                };
+
+                // Check if the selected therapist has a WhatsApp number
+                if (therapistWhatsAppNumbers.hasOwnProperty(therapist)) {
+                    var therapistWhatsAppNumber = therapistWhatsAppNumbers[therapist];
+                    // Open WhatsApp link with prefilled message
+                    window.open("https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message), "_blank");
+                } else {
+                    alert("Selected therapist does not have a WhatsApp number.");
+                }
+            } else {
+                alert("Please fill all the required fields and confirm age.");
+            }
+        }
+
+        // Event listener for form submission
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            submitForm();
+        });
+
+        // Event listener for form inputs change
+        document.getElementById("bookingForm").addEventListener("change", function() {
+            // Remove 'is-invalid' class when user starts typing
+            this.querySelectorAll(".is-invalid").forEach(function(element) {
+                element.classList.remove("is-invalid");
+            });
+        });
+
+        // Sorting based on specialty 
+        document.addEventListener('DOMContentLoaded', () => {
+            var servicesDropdown = document.getElementById('treatment');
+            var TherapistDropdown = document.getElementById('country');
+
+            var therapist = [
+                { name: 'Changa Lhamo', speciality: 'Swedish massage' },
+                { name: 'Pema Lhazin', speciality: 'Head massage' },
+                { name: 'Yanka Dem', speciality: 'Foot massage' },
+                { name: 'You Raj', speciality: 'Swedish massage' },
+                { name: 'Pema Tshering', speciality: 'Head massage' },
+                { name: 'Kinley Pem', speciality: 'Head massage' },
+                { name: 'Dawa Choden', speciality: 'Head massage' },
+                { name: 'Tashi Dorji', speciality: 'Body massage' },
+                { name: 'Tshering Lham', speciality: 'Swedish massage' },
+                { name: 'Dochen', speciality: 'Foot massage' },
+                { name: 'Leki Wangmo', speciality: 'Foot massage' },
+                { name: 'Wangchuk Dema', speciality: 'Swedish massage' },
+                { name: 'Thinley Wangmo', speciality: 'Body massage' },
+                { name: 'Yoenten', speciality: 'Head massage' },
+                { name: 'Pema Wangda', speciality: 'Foot massage' },
+
+            ];
+            servicesDropdown.addEventListener('change', () => {
+                var selectedServices = servicesDropdown.value;
+                TherapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
+
+                var filterTherapists = therapist.filter(therapist => therapist.speciality ===selectedServices);
+
+                filterTherapists.forEach(therapist => {
+                    var option = document.createElement('option');
+                    option.value = therapist.name;
+                    option.textContent = therapist.name;
+                    TherapistDropdown.appendChild(option);
+                });
+            });
+
+        });
+
+</script>  
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Therapist</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Belleza&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- <script src="./script.js" charset="UTF-8"></script> -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navbar.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});		
+	</script>
+
+    <div id="navigation"></div>
+    <!-- SPA THERAPIST FORM -->
+    <section id="spaTherapistForm">
+        <div>
+            <main>
+                <div class="py-5 text-center">
+                    <h1>BOOK A THERAPIST</h1>
+                </div>
+    
+                <div class="row g-5">
+                    <div class="col-md-7 form col-lg-8">
+                        <div class="text-left">
+                            <p class="mb-4">To be eligible for appointment booking, users must be at least eighteen (18) years of age, however, spa treatments are only available to those three (3) years of age or older.</p>
+                        </div>
+                        <p class="mb-4">Spa therapist can take up to 1 number of guests at a time.</p>
+                        <form id="bookingForm" class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="blankForm col-sm-12">
+                                    <div class="col-sm-6 px-2">
+                                        <label for="firstName" class="form-label">Your full name:</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Please enter your name" value="" required="">
+                                        <div class="invalid-feedback">
+                                            Valid first name is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 px-2">
+                                        <label for="ageRange" class="form-label">Age range of the one who is availing the service</label>
+                                        <select class="form-select" id="ageRange" required="">
+                                            <option value="">Select your age range</option>
+                                            <option value="6 months-1 year">6 months-1 year</option>
+                                            <option value="2 years-5 years">2 years-5 years</option>
+                                            <option value="6 years-13 years">6 years-13 years</option>
+                                            <option value="14 years-18 years">14 years-18 years</option>
+                                            <option value="19 years-30 years">19 years-30 years</option>
+                                            <option value="31 years-45 years">31 years-45 years</option>
+                                            <option value="Above 46">Above 46</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid age range.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="mb-0 mt-4 px-4">Appointment Date & Time:</h5>
+                            <div class="dateTime px-2 mb-4">
+                                <div class="date col-sm-6">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" id="date" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please select a valid date.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 px-2">
+                                    <div class="time">
+                                        <label for="time" class="form-label mt-1">Time</label>
+                                        <select class="form-select" id="time" required>
+                                            <option value="">Please select your preferred time</option>
+                                            <option value="Morning">Morning</option>
+                                            <option value="Afternoon">Afternoon</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Night">Night</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blankForm col-sm-12">                             
+
+                                <div class="col-sm-6 px-2">
+                                    <label for="treatment" class="form-label">Choose your treatment</label>                               
+                                    <select class="form-select" id="treatment" required="">
+                                        <option value="">Select your treatment</option>
+                                       <option value="Thai massage">Thai massage</option>
+                                        <option value="Swedish massage">Swedish massage</option>
+                                        <option value="Head massage">Head massage</option>
+                                        <option value="Head & shoulder massage">shoulder massage</option>
+                                        <option value="Foot massage">Foot massage</option>
+                                        <option value="Baby massage">Baby massage</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid treatment.
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6 px-2">
+                                    <label for="country" class="form-label">Choose your preferred spa therapist</label>
+                                    <select class="form-select" id="country" required="">
+                                        <option value="">Select your preferred therapist</option>
+
+                                        <!-- <option value="Chenga Lhamo">Chenga Lhamo</option>
+                                        <option value="Dawa Choden">Dawa Choden</option>
+                                        <option value="Dochen">Dochen</option>
+                                        <option value="Dorji Wangda">Dorji Wangda</option>
+                                        <option value="Kinley Pem">Kinley Pem</option>
+                                        <option value="Kinley Wangmo">Kinley Wangmo</option>
+                                        <option value="Kuenga Yuden">Kuenga Yuden</option>
+                                        <option value="Leki Wangmo">Leki Wangmo</option>
+                                        <option value="Nima Lhadon">Nima Lhadon</option>
+                                        <option value="Pema Tshering">Pema Tshering</option>
+                                        <option value="Tashi Dorji">Tashi Dorji</option>
+                                        <option value="Thinley Wangmo">Thinley Wangmo</option>
+                                        <option value="Tshomo Tshomo">Tshomo Tshomo</option>
+                                        <option value="Tshering Lham">Tshering Lham</option>
+                                        <option value="Wangchuk Dema">Wangchuk Dema</option>
+                                        <option value="Yangka Dem">Yangka Dem</option>
+                                        <option value="Yenton">Yenton</option>
+                                        <option value="Yeshi Choden">Yeshi Choden</option>
+                                        <option value="Yeshi Dema">Yeshi Dema</option>
+                                        <option value="You Raj Suberi">You Raj Suberi</option> -->
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid therapist.
+                                    </div>
+                                </div>                               
+                            </div>
+
+
+                            <hr class="hr my-5">
+                            <h5 class="mt-5">POLICY</h5>
+                            <p class="mb-3">To secure your booking, a 50% advance payment is required. You will then be redirected to a secure WhatsApp Business link for payment through various mobile banking applications. If you cancel the appointment after confirmation, 50% of the deposit will be retained as a cancellation fee.</p>
+                            <div class="form-check my-4">
+                                <input id="ageConfirmation" name="paymentMethod" type="checkbox" class="form-check-input" required>
+                                <label class="form-check-label px-3" for="ageConfirmation">I agree that I am 18 years of age or older.</label>
+                            </div>
+    
+                            <button type="button" class="btn" id="submitButton">SUBMIT THE FORM & PROCEED WITH THE ADVANCEMENT PAYMENT</button>
+    
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+    
+<!-- END-BOOK-THERAPIST -->
+<div id="footer"></div>     
+
+<script>
+            // Function to validate form fields
+        function validateForm() {
+            var isValid = true;
+            var form = document.getElementById("bookingForm");
+
+            // Check if all required fields are filled
+            Array.from(form.elements).forEach(function(element) {
+                if (element.required && element.value === "") {
+                    element.classList.add("is-invalid");
+                    isValid = false;
+                }
+            });
+
+            // Check if age confirmation checkbox is checked
+            var ageConfirmation = document.getElementById("ageConfirmation");
+            if (!ageConfirmation.checked) {
+                ageConfirmation.classList.add("is-invalid");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Function to generate WhatsApp message
+        function generateWhatsAppMessage() {
+            var therapist = document.getElementById("country").value;
+            var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
+
+            return message;
+        }
+
+        // Function to submit the form
+        function submitForm() {
+            if (validateForm()) {
+                var therapist = document.getElementById("country").value;
+                var message = generateWhatsAppMessage();
+
+                // Assuming each therapist's WhatsApp number is stored in an object
+                var therapistWhatsAppNumbers = {
+                            "Chenga Lhamo": "+97517919089",
+                            "Dawa Choden": "+97517953183",
+                            "Dochen": "+97517454107",
+                            "Dorji Wangda": "+97517858542",
+                            "Kinley Pem": "+97577290825",
+                            "Kinley Wangmo": "+97517580753",
+                            "Kuenga Yuden": "+97517708053",
+                            "Leki Wangmo": "+97517943608",
+                            "Nima Lhadon": "+97517901743",
+                            "Pema Tshering": "+97517423065",
+                            "Tashi Dorji": "+97577301268",
+                            "Thinley Wangmo": "+97577861930",
+                            "Tshomo Tshomo": "+97517624883",
+                            "Tshering Lham": "+97517859177",
+                            "Wangchuk Dema": "+97517941831",
+                            "Yangka Dem": "+97517265521",
+                            "Yenton": "+97517265521",
+                            "Yeshi Choden": "+97517452149",
+                            "Yeshi Dema": "+97517684320",
+                            "You Raj Suberi": "+97517419575"
+                    // Add other therapists and their WhatsApp numbers here
+                };
+
+                // Check if the selected therapist has a WhatsApp number
+                if (therapistWhatsAppNumbers.hasOwnProperty(therapist)) {
+                    var therapistWhatsAppNumber = therapistWhatsAppNumbers[therapist];
+                    // Open WhatsApp link with prefilled message
+                    window.open("https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message), "_blank");
+                } else {
+                    alert("Selected therapist does not have a WhatsApp number.");
+                }
+            } else {
+                alert("Please fill all the required fields and confirm age.");
+            }
+        }
+
+        // Event listener for form submission
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            submitForm();
+        });
+
+        // Event listener for form inputs change
+        document.getElementById("bookingForm").addEventListener("change", function() {
+            // Remove 'is-invalid' class when user starts typing
+            this.querySelectorAll(".is-invalid").forEach(function(element) {
+                element.classList.remove("is-invalid");
+            });
+        });
+
+        // Sorting based on specialty 
+        document.addEventListener('DOMContentLoaded', () => {
+            var servicesDropdown = document.getElementById('treatment');
+            var TherapistDropdown = document.getElementById('country');
+
+            var therapist = [
+                { name: 'Changa Lhamo', speciality: 'Swedish massage' },
+                { name: 'Pema Lhazin', speciality: 'Head massage' },
+                { name: 'Yanka Dem', speciality: 'Foot massage' },
+                { name: 'You Raj', speciality: 'Swedish massage' },
+                { name: 'Pema Tshering', speciality: 'Head massage' },
+                { name: 'Kinley Pem', speciality: 'Head massage' },
+                { name: 'Dawa Choden', speciality: 'Head massage' },
+                { name: 'Tashi Dorji', speciality: 'Body massage' },
+                { name: 'Tshering Lham', speciality: 'Swedish massage' },
+                { name: 'Dochen', speciality: 'Foot massage' },
+                { name: 'Leki Wangmo', speciality: 'Foot massage' },
+                { name: 'Wangchuk Dema', speciality: 'Swedish massage' },
+                { name: 'Thinley Wangmo', speciality: 'Body massage' },
+                { name: 'Yoenten', speciality: 'Head massage' },
+                { name: 'Pema Wangda', speciality: 'Foot massage' },
+
+            ];
+            servicesDropdown.addEventListener('change', () => {
+                var selectedServices = servicesDropdown.value;
+                TherapistDropdown.innerHTML = '<option value="">--Select Therapist--</option>';
+
+                var filterTherapists = therapist.filter(therapist => therapist.speciality ===selectedServices);
+
+                filterTherapists.forEach(therapist => {
+                    var option = document.createElement('option');
+                    option.value = therapist.name;
+                    option.textContent = therapist.name;
+                    TherapistDropdown.appendChild(option);
+                });
+            });
+
+        });
+
+</script>  
+</body>
+>>>>>>> fc14e25dccee4e58f5b5076145a96a26ab989336
+</html>

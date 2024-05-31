@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swedish Massage</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Basic&family=Belleza&display=swap" rel="stylesheet">  
+      <!-- favicon -->
+      <link rel="icon" type="image/x-icon" href="./assets/images/Spa-Logo.png">
+</head>
+
+<body>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="./script.js" charset="UTF-8"></script>
+
+  <script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navbar.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});		
+	</script>
+
+    <div id="navigation"></div>
+
+  <!-- SWEDISH MASSAGE -->
+  <section id="detail-services">
+    <h1 class="readmore-heading">SWEDISH MASSAGE</h1>
+
+    <div class="read-more-banner">
+      <img src="./assets/images/swedish 3.png" alt="swedish massage banner" style="width:100%;">
+      <div class="top-left">
+        <i class="fa-solid fa-quote-left"></i>
+        Swedish massage: tranquil, soothing, gentle strokes,<br> relaxation, tension relief, rejuvenation, balance..<i class="fa-solid fa-quote-right"></i> <br><br>
+        <a href="./bookTherapist.html"><button class="button">BOOK NOW</button></a>
+      </div>
+      <div class="bottom-right">30 minutes or want to luxuriate in a full 90-minute</div>
+    </div>
+
+    <div class="techniques">
+      <h3>TECHNIQUES:</h3>
+      <p>
+        Get ready for a symphony of strokes! In Swedish massage, we'll use a variety of techniques to help you unwind and let go of tension. From effleurage (long, gliding strokes) to petrissage (kneading and squeezing muscles), we've got all the moves to make you feel like royalty. And let's not forget about those heavenly tapotement (rhythmic tapping) and friction (deep, circular movements) techniques – they're like a mini vacation for your muscles!
+      </p>
+    </div>
+
+    <div class="row mb-3 text-center">
+      <div class="col-md-8 themed-grid-col">
+        <img src="./assets/images/adv 1.png" width="100%" alt="swedish massage 2" class="thai-img2">
+      </div>
+      <div class="col-6 col-md-4 themed-grid-col">
+        <div class="quotes"><br>
+          Swedish massage isn't just a treatment – it's a journey to relaxation nirvana. So sit back, unwind, and let us work our magic. Whether you're looking to soothe sore muscles, melt away stress, or simply treat yourself to some well-deserved pampering, Swedish massage has got you covered. Get ready to drift off into a world of pure bliss – you've earned it!
+        </div>
+        <div class="precautions py-4">
+          <h3>PRECAUTION:</h3>
+          <p>
+            Your comfort and safety are our top priorities, so let's chat before we get started. If you've got any health concerns or areas of tension you'd like us to focus on, just give us the scoop. We're here to make sure your Swedish massage experience is nothing short of perfection!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3 text-center">
+      <div class="col-md-8 themed-grid-col">
+        <div class="pb-3">
+          <h3 class="benefits">BENEFITS:</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-6 themed-grid-col">
+            <h4 class="details-subheading">Physical benefits</h4>
+            <ul>
+              <li>Improved blood circulation</li>
+              <li>Reduced muscle tension</li>
+              <li>Increased joint mobility and flexibility</li>
+              <li>Enhanced lymphatic drainage</li>
+              <li>Alleviation of chronic pain</li>
+            </ul>
+          </div>
+          <div class="col-md-6 themed-grid-col">
+            <h4 class="details-subheading">Mental and emotional benefits</h4>
+            <ul>
+              <li>Stress reduction</li>
+              <li>Promotion of relaxation</li>
+              <li>Increased feelings of well-being</li>
+              <li>Reduction of anxiety and depression symptoms</li>
+              <li>Improved mood and overall emotional balance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 themed-grid-col">
+        <img src="./assets/images/swedish 1.png" alt="" class="thai-img3" width="100%">
+      </div>
+    </div>
+
+    <img src="./assets/images/adv 3.png" width="100%" alt="">
+  </section>
+  <!-- END swedish massage -->
+
+  <div id="footer"></div>
+
+</body>
+</html>
