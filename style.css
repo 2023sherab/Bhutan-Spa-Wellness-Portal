@@ -1404,11 +1404,16 @@ display: flex;
     #spaTherapistForm .blankForm{
       display: block;
     }
+
+    /* #spaTherapistForm label .form-label {
+      margin-top: 2rem;
+      text-align: center;
+    } */
+
   }  
 
-  .therapists{
-    color: red;
-  }
+ 
+  
 /* END-BOOK-THERAPIST */
 
 
