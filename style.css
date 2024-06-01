@@ -1254,6 +1254,10 @@ display: flex;
 
 
 /* BOOK-THERAPIST */
+  #spaTherapistForm .therapists{
+    color: red;
+  }
+  
   #spaTherapistForm P{
     font-family: "Basic", sans-serif;
     font-weight: 400;
@@ -1392,10 +1396,7 @@ display: flex;
       text-align: center;
     } */
 
-  }  
-
- 
-  
+  } 
 /* END-BOOK-THERAPIST */
 
 
