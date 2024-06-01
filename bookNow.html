@@ -123,7 +123,7 @@
                                        <option value="Thai massage">Thai massage:   Nu.700</option>
                                         <option value="Swedish massage">Swedish massage:    Nu.750</option>
                                         <option value="Head massage">Head massage:  Nu.200</option>
-                                        <option value="Head & shoulder massage">shoulder massage:   Nu.450</option>
+                                        <option value="Shoulder massage">Shoulder massage:   Nu.450</option>
                                         <option value="Foot massage">Foot massage:  Nu.450</option>
                                         <option value="Baby massage">Baby massage:  Nu.400</option>
                                     </select>
@@ -282,33 +282,33 @@
         var therapistDropdown = document.getElementById('country');
 
         var therapists = [
-            { name: 'Changa Lhamo', speciality: 'Thai massage' },
-            { name: 'Dawa Choden', speciality: 'shouder massage' },
-            { name: 'Dochen', speciality: 'Thai massage' },
-            { name: 'Dorji Wangda', speciality: 'Swedish massage' },
-            { name: 'Kinley Pem', speciality: 'Head massage' },
-            { name: 'Kinley Wangmo', speciality: 'Head massage' },
-            { name: 'Kuenga Yuden', speciality: 'Head massage' },
-            { name: 'Leki Wangmo', speciality: 'Baby massage' },
-            { name: 'Nima Lhadon', speciality: 'Swedish massage' },
-            { name: 'Pema Tshering', speciality: 'Foot massage' },
-            { name: 'Tashi Dorji', speciality: 'Foot massage' },
-            { name: 'Thinley Wangmo', speciality: 'Swedish massage' },
-            { name: 'Tshomo Tshomo', speciality: 'Thai massage' },
-            { name: 'Tshering Lham', speciality: 'Head massage' },
-            { name: 'Wangchuk Dema', speciality: 'Baby massage' },
-            { name: 'Yangka Dem', speciality: 'Thai massage' },
-            { name: 'Yoenten', speciality: 'Foot massage' },
-            { name: 'Yeshi Choden', speciality: 'Shoulder massage' },
-            { name: 'Yeshi Dema', speciality: 'Foot massage' },
-            { name: 'You Raj Suberi', speciality: 'Shoulder massage' }
+            { name: 'Changa Lhamo', specialty: 'Thai massage' },
+            { name: 'Dawa Choden', specialty: 'Shoulder massage' },
+            { name: 'Dochen', specialty: 'Thai massage' },
+            { name: 'Dorji Wangda', specialty: 'Swedish massage' },
+            { name: 'Kinley Pem', specialty: 'Head massage' },
+            { name: 'Kinley Wangmo', specialty: 'Head massage' },
+            { name: 'Kuenga Yuden', specialty: 'Head massage' },
+            { name: 'Leki Wangmo', specialty: 'Baby massage' },
+            { name: 'Nima Lhadon', specialty: 'Swedish massage' },
+            { name: 'Pema Tshering', specialty: 'Foot massage' },
+            { name: 'Tashi Dorji', specialty: 'Foot massage' },
+            { name: 'Thinley Wangmo', specialty: 'Swedish massage' },
+            { name: 'Tshomo Tshomo', specialty: 'Thai massage' },
+            { name: 'Tshering Lham', specialty: 'Head massage' },
+            { name: 'Wangchuk Dema', specialty: 'Baby massage' },
+            { name: 'Yangka Dem', specialty: 'Thai massage' },
+            { name: 'Yoenten', specialty: 'Foot massage' },
+            { name: 'Yeshi Choden', specialty: 'Shoulder massage' },
+            { name: 'Yeshi Dema', specialty: 'Foot massage' },
+            { name: 'You Raj Suberi', specialty: 'Shoulder massage' }
         ];
 
         servicesDropdown.addEventListener('change', () => {
             var selectedService = servicesDropdown.value;
             therapistDropdown.innerHTML = '<option value="" class="therapists">--Therapist available based on the selected treatment--</option>';
 
-            var filteredTherapists = therapists.filter(therapist => therapist.speciality === selectedService);
+            var filteredTherapists = therapists.filter(therapist => therapist.specialty === selectedService);
 
             filteredTherapists.forEach(therapist => {
                 var option = document.createElement('option');
