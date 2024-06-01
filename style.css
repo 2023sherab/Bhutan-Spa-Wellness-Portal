@@ -734,21 +734,19 @@ ul li {
 }
 /* END-ALL-SPA-MASSAGE*/
 
-
-
-/* FIND-THERAPIST */
+/* Find a therapist */
 #findTherapist .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: white;           
+  background-color: white;
 }
 
-#findTherapist h5{
-  font-family: "Belleza", sans-serif;    
+#findTherapist h5 {
+  font-family: "Belleza", sans-serif;
   font-style: normal;
   font-size: 22px;
-  color: #800E13;  
+  color: #800E13;
 }
 
 #findTherapist .container h1 {
@@ -786,41 +784,32 @@ ul li {
   width: 100%;
 }
 
-#findTherapist .btn{
+#findTherapist .btn {
   border: none;
   padding: 10px;
-  width:fit-content;
+  width: fit-content;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 10px;
   background-color: var(--Heading-color);
-  font-family: "Belleza", sans-serif;              
+  font-family: "Belleza", sans-serif;
   font-style: normal;
-  font-size: 18px;            
-  font-weight: normal;   
+  font-size: 18px;
+  font-weight: normal;
   background-color: #e5b808;
-  color: #800E13;  
+  color: #800E13;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;          
 }
 
-#findTherapist .btn:hover{
+#findTherapist .btn:hover {
   background-color: #800E13;
-  color: #e5b808;  
-}
-
-#findTherapist .card img {
-  width: 100%;
-  height: auto;
-  display: block;
+  color: #e5b808;
 }
 
 #findTherapist .card-group {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 20px;
 }
@@ -829,93 +818,96 @@ ul li {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 250px; /* Fixed width */
+  height: auto; /* Fixed height */
+}
+
+#findTherapist .card img {
+  width: 50%;
+  height: 50%; /* Fixed height */
+  object-fit: cover;
+  display: block;
+  margin: 2rem auto;
 }
 
 #findTherapist .card-body {
   padding: 16px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-#findTherapist .card img{
-  width: 50%;
-  display: block;
-  margin: auto;
-  margin-top: 2rem;
-}
-#findTherapist .card p{
+#findTherapist .card-body p {
   text-align: center;
   font-family: "Basic", sans-serif;
   font-style: normal;
-
 }
-#findTherapist option{
+
+#findTherapist .card-body form {
+  display: flex;
+  justify-content: center;
+}
+
+#findTherapist option {
   font-family: "Basic", sans-serif;
   font-style: normal;
   font-size: 16px;
 }
 
-#findTherapist label{
-  font-family: "Belleza", sans-serif;    
+#findTherapist label {
+  font-family: "Belleza", sans-serif;
   font-style: normal;
   font-size: 18px;
   color: #800E13;
   font-weight: normal;
 }
 
-#findTherapist{ 
-margin-bottom: 5rem;
-}
-
-.card {
-  width: 100%;
-  max-width: 300px; 
-  margin: auto; 
-}
-
-.card img {
-  width: 100%; 
+#findTherapist {
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 768px) {
   #findTherapist .container h1 {
-      font-size: 32px;
+    font-size: 32px;
   }
 
   #findTherapist .search-bar {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   #findTherapist .search-bar div {
-      width: 100%;
-      max-width: 300px;
+    width: 100%;
+    max-width: 300px;
   }
 
   #findTherapist button {
-      width: 100%;
-      margin: 10px 0;
+    width: 100%;
+    margin: 10px 0;
   }
 }
 
 @media (max-width: 576px) {
   #findTherapist .container h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   #findTherapist .search-bar {
-      padding: 0 10px;
+    padding: 0 10px;
   }
 
   #findTherapist .search-bar div {
-      width: 100%;
-      max-width: none;
+    width: 100%;
+    max-width: none;
   }
 
   #findTherapist .card-body p {
-      font-size: 14px;
+    font-size: 14px;
   }
-} 
+}
 /*END-FIND-THERAPIST */
 
 
