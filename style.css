@@ -1106,12 +1106,6 @@ display: flex;
   font-size: 24px;
   color: #800;
 }
-/* #FAQ label{
-  font-family: "Belleza", sans-serif;    
-  font-style: normal;
-  font-size: 18px;
-  color: #800E13;
-} */
 
 #FAQ .form-container {
   display: flex;
@@ -1181,9 +1175,7 @@ display: flex;
   cursor: pointer;
   font-size: 16px;
 }
-/* #FAQ .form-container button:hover {
-  background-color: #e29e0c;
-} */
+
 #FAQ .form-check-label {
   margin-left: 8px;
   color: #800;
@@ -1212,7 +1204,6 @@ display: flex;
   font-size: 18px;
   padding: 0px;
 }
-
 /* Responsive styles */
 @media (max-width: 768px) {
   #FAQ .form-container {
