@@ -46,12 +46,8 @@
 
 
 /* NAVBAR*/
-.navbar{
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure it is above other elements */
-  background-color:#ffdeb6;
-  box-shadow: 0 4px 6px#ffdeb6(0, 0, 0, 0.1);  
+.navbar{ 
+  background-color:#ffdeb6;   
   padding: 2rem; 
 }
 
