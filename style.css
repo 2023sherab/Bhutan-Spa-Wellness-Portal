@@ -553,10 +553,10 @@ width: 100%;
 
 
 /* ALL-SPA-MASSAGE*/
+/* Detail Services Section */
 #detail-services {
   width: 80%;
-  margin: auto;  
-  margin-bottom: 5rem;
+  margin: auto;
 }
 
 .readmore-heading {
@@ -567,34 +567,60 @@ width: 100%;
   margin-top: 3rem;
 }
 
-.read-more-banner {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  font-family: "Basic", sans-serif;
+.fa-solid {
+  color: #e5b808;
+}
+
+/* Benefits Section */
+.readmore-benefits-heading {
+  color: #800E13;
+  font-size: 24px;
+  margin-top: 4rem;
+}
+
+.readmore-benefits-subheading {
+  color: #800E13;
   font-size: 18px;
+  font-family: 'Basic', sans-serif;
+  text-align: left;
 }
 
-.top-left {
-  position: absolute;
-  top: 30%;
-  left: 16px;
+.readmore-benefits-list {
+  text-align: left;
+  font-family: 'Basic', sans-serif;
 }
 
-.button {
+.readmore-btn {
   color: #800e13;
   background: #e5b80b;
   height: 40px;
-  width: 120px;
+  padding: 0.5rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-family: "Belleza", sans-serif;
   font-size: 18px;
 }
 
-.button:hover {
+.readmore-btn:hover {
   color: #e5b80b;
   background: #800e13;
+}
+
+#detail-services .readmore-short-description {
+  font-family: 'Basic', sans-serif;
+  text-align: justify;
+  margin-top: 2rem;
+}
+
+.readmore-short-description span {
+  color: #800E13;
+}
+
+/* Banner Section */
+.readmore-banner {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 .bottom-right {
@@ -603,134 +629,185 @@ width: 100%;
   right: 0;
   color: #800e13;
   background: #ffdeb6;
-  padding: 0 10px;
-}
-
-.techniques h3 {
-  font-family:"Belleza", sans-serif;
-  color: #800e13;
-  margin-top: 2rem;
-  font-weight: 100;
-}
-
-.techniques p {
-  font-family: "Basic", sans-serif;
-  text-align: justify;
-}
-
-.techniques p span {
-  font-weight: bold;
-  color: #800e13;
-}
-
-.quotes {
-  text-align: justify;
-  color: #800e13;
-  font-family: Basic;
-}
-
-.precautions h3 {
-  color: #800e13;
-  margin-top: 20px;
-  font-family: Belleza;
-}
-
-.precautions p {
-  text-align: justify;
-  font-family: "Basic", sans-serif;
-}
-
-.benefits {
-  color: #800e13;
-  font-family:"Belleza", sans-serif;
-}
-
-.thai-img2 {
-  height: 395px;
-  margin-top: 2rem;
-}
-
-ul li {
-  text-align: left;
-  font-family: "Basic", sans-serif;
-}
-
-.details-subheading {
-  text-align: left;
-  color: #800e13;
+  border-radius: 4px;
+  padding: 5px;
+  font-family: 'Basic', sans-serif;
   font-size: 18px;
-  font-style: normal;
+}
+
+#detail-services .readmore-middle-image {
+  margin-top: 3rem;
+}
+
+/* Techniques Section */
+.readmore-techniques-heading {
+  color: #800E13;
+  font-family: 'Belleza', sans-serif;
+  font-size: 24px;
+}
+
+.readmore-techniques-text {
+  text-align: justify;
+  margin-left: 12px;
+  font-family: 'Basic', sans-serif;
+}
+
+.readmore-techniques-text span {
+  color: #800E13;
+}
+
+.readmore-precautions-heading {
+  color: #800E13;
+  font-family: 'Belleza', sans-serif;
+  font-size: 24px;
+}
+
+.readmore-precautions-text {
+  text-align: justify;
+  margin-left: 12px;
+}
+
+/* Quotes Section */
+.readmore-quotes p {
+  text-align: justify;
+  margin-left: 12px;
+  margin-top: 4rem;
+  font-family: 'Basic', sans-serif;
+  color: #800E13;
+}
+
+/* Go Back Links */
+.go-back-links {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.go-back-links a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #e5b808;
+  font-family: 'Belleza', sans-serif;
+  font-size: 18px;
+}
+
+.go-back-links a:hover {
+  color: #800E13;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  #detail-services {
+    width: 90%;
+  }
+
+  .readmore-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .readmore-techniques-heading,
+  .readmore-precautions-heading {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .readmore-benefits-list{
+    font-size: 0.7rem;
+  }
+  .readmore-techniques-text,
+  .readmore-precautions-text,
+  .readmore-quotes p {
+    font-size: 0.8rem;
+  }
+
+  .readmore-benefits-subheading {
+    font-size: 1rem;
+  }
+
+  #detail-services .readmore-short-description{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  #detail-services .readmore-middle-image{
+    margin-top: 1rem;
+  }
+  .go-back-links{
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .read-more-banner {
-    font-size: 16px;
-  }
-
-  .top-left {
-    top: 0;
-    left: 8px;
-  }
-
-  .button {
-    width: 90px;
-    height: 35px;
-    font-size: 14px;
-  }
-
-  .bottom-right {
-    bottom: 0;
-    right: 0;
-  }
-
-  .thai-img2 {
-    height: 300px;
-  }
-
-  .quotes,
-  .precautions {
-    display: none;
-  }
-
-  .benefits {
-    text-align: left;
-  }
-
-  .details-subheading {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
   #detail-services {
     width: 95%;
   }
 
-  .top-left {
-    top: 0;
-    left: 0;
+  .readmore-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
   }
 
-  .button {
-    width: 80px;
-    height: 30px;
-    font-size: 12px;
+  .readmore-techniques-heading,
+  .readmore-precautions-heading {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .readmore-benefits-heading {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .readmore-techniques-text,
+  .readmore-precautions-text,
+  .readmore-quotes p {
+    font-size: 0.8rem;
+  }
+  
+  .readmore-quotes p{
+    margin-top: 2rem;
+  }
+  .readmore-benefits-subheading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .readmore-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .readmore-techniques-heading,
+  .readmore-precautions-heading {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .readmore-benefits-heading {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .readmore-techniques-text,
+  .readmore-precautions-text,
+  .readmore-quotes p {
+    font-size: 0.7rem;
+  }
+
+  .readmore-benefits-subheading {
+    font-size: 1rem;
   }
 
   .bottom-right {
-    bottom: 0;
-    right: 0;
-    font-size: 14px;
-  }
-
-  .thai-img2 {
-    height: 200px;
-  }
-
-  .details-subheading {
-    font-size: 14px;
+    font-size: 0.8rem;
+    padding: 3px 7px;
   }
 }
+
 /* END-ALL-SPA-MASSAGE*/
 
 /* Find a therapist */
