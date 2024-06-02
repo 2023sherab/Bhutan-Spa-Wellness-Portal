@@ -43,16 +43,20 @@
   .hr{
     color: #800E13;
   }
-
+ 
 
 /* NAVBAR*/
+.navbar .container-fluid{
+  width: 80%;
+}
+
 .navbar{ 
   background-color:#ffdeb6;   
   padding: 2rem; 
 }
 
 .navbar-nav{
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 
 #navbarSupportedContent li a{
@@ -415,14 +419,16 @@
 #spaServices {
   width: 80%;
   margin: auto;
+  margin-bottom: 5rem;
 }
-.services-title {
+.services-title{
   text-align: center;
   color: #800e13;
   font-family: "Belleza", sans-serif;
   margin-bottom: 2rem;
   font-size: 40px;
-}
+  margin-top: 7rem;
+  }
 
 #spaServices  .service-card-header {
   margin-top: 1rem;
@@ -484,14 +490,14 @@
   font-family: "Basic", sans-serif;
 }
 
-#spaServices  .service-card .read-more {
-  color: #800e13;
+#spaServices  .service-card .read-more{
+  color: #800E13;
   font-weight: 400;
   font-size: 16px;
   text-decoration: none;
   cursor: pointer;
   font-family: "Belleza", sans-serif;
-  background: #e5b808;
+  background: #FFDEB6;
   padding: 5px 5px;
   border-radius: 5px;
 }
@@ -532,6 +538,8 @@
 #detail-services {
   width: 80%;
   margin: auto;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
 }
 
 .readmore-heading {
@@ -599,9 +607,10 @@
   bottom: 0;
   right: 0;
   color: #800e13;
-  background: #fff;
+  background: #FFDEB6;
   font-family: 'Basic', sans-serif;
   font-size: 16px;
+  padding: 0.5rem;
 }
 
 #detail-services .readmore-middle-image {
@@ -780,6 +789,11 @@
 /* END-ALL-SPA-MASSAGE*/
 
 /* Find a therapist */
+#findTherapist{
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+
 #findTherapist .container {
   width: 90%;
   max-width: 1200px;
@@ -958,6 +972,12 @@
 
 
 /* BE-OUR-THERAPIST */
+#beOurTherapistForm{
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+
+
 #beOurTherapistForm P{
   font-family: "Basic", sans-serif;
   font-weight: 400;
@@ -1128,6 +1148,11 @@ display: flex;
 
 
 /* FEEDBACK-FORM */
+.feedbackForm{
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+}
+
 #FAQ .feedbackForm {
   padding: 20px;
   background: #fff;
