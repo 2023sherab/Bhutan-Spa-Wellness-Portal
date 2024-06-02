@@ -24,55 +24,44 @@
     <script src="./script.js" charset="UTF-8"></script> 
     
    <!-- NAVBAR -->  
-   <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
-            <img src="./assets/images/Logo.png" width="130px" alt="spaLogo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <img src="./assets/images/Logo.png" alt="logo" width="170px">      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./spaServices.html">SERVICES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./beOurTherapist.html">BE OUR THERAPIST</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./findTherapist.html">FIND A THERAPIST</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./feedback.html">FEEDBACK</a>
-                    </li>               
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./spaServices.html">SERVICES</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./findTherapist.html">FIND A THERAPIST</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./beOurTherapist.html">BE OUR THERAPIST</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./feedback.html">FEEDBACK</a>
+                </li>            
+                              
                 </ul>
                 <form class="d-flex" role="trigger">               
-                <button class="btn" type="submit"><a href="./bookNow.html">BOOK NOW</a></button>
+                <button class="btn" type="submit"> <a href="./bookNow.html">BOOK NOW</a></button>
                 </form>
             </div>
         </div>
     </nav>
     <!-- END-NAVBR -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var navbarToggler = document.querySelector('.navbar-toggler');
-            var navbarCollapse = document.querySelector('.navbar-collapse');
     
-            navbarToggler.addEventListener('click', function () {
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                } else {
-                    navbarCollapse.classList.add('show');
-                }
-            });
-        });
-    </script>
-
 
 </body>
 </html>

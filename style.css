@@ -47,40 +47,16 @@
 
 /* NAVBAR*/
 .navbar .container-fluid{
-  width: 80%;
+  width: 90%;
 }
 
-/* Ensure the navbar content doesn't overlap when expanded */
-.navbar-collapse {
-  position: relative;
-}
-
-/* Ensure the content below is pushed down */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-      height: auto;
-      overflow: hidden;
-      transition: height 0.35s ease;
-  }
-
-  .navbar-collapse.show {
-      height: auto; /* Adjust based on your desired behavior */
-  }
-
-  .navbar-nav {
-      margin-top: 1rem;
-  }
-}
-
-/* Adjust the height of the navbar-toggler when expanded */
-.navbar-toggler {
-  z-index: 1;
-  height: 3.5rem;
+.navbar .btn{
+  border: none;
 }
 
 .navbar{ 
   background-color:#ffdeb6;   
-  padding: 2rem; 
+  /* padding: 2rem;  */
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -153,14 +129,14 @@
     padding-right: 3rem;  
   }
 
-  .footer li{  
+  .footer li a{  
     font-family: "Basic", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: black;
     font-size: 16px;
-  }
-
+  } 
+  
   @media (max-width: 545px){
     .footer img{
       width: 80px;
@@ -460,7 +436,7 @@
   font-family: "Belleza", sans-serif;
   margin-bottom: 2rem;
   font-size: 40px;
-  margin-top: 7rem;
+  margin-top: 5rem;
   }
 
 #spaServices  .service-card-header {
@@ -571,8 +547,8 @@
 #detail-services {
   width: 80%;
   margin: auto;
-  margin-top: 7rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .readmore-heading {
@@ -823,7 +799,7 @@
 
 /* Find a therapist */
 #findTherapist{
-  margin-top: 7rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
 }
 
@@ -1006,7 +982,7 @@
 
 /* BE-OUR-THERAPIST */
 #beOurTherapistForm{
-  margin-top: 7rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
 }
 
@@ -1182,7 +1158,7 @@ display: flex;
 
 /* FEEDBACK-FORM */
 .feedbackForm{
-  margin-top: 7rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
