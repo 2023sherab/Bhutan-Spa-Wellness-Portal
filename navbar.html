@@ -24,7 +24,7 @@
     <script src="./script.js" charset="UTF-8"></script> 
     
    <!-- NAVBAR -->  
-   <nav class="navbar navbar-expand-lg fixed-top">
+   <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <img src="./assets/images/Logo.png" width="130px" alt="spaLogo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,5 +56,23 @@
             </div>
         </div>
     </nav>
+    <!-- END-NAVBR -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+    
+            navbarToggler.addEventListener('click', function () {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                } else {
+                    navbarCollapse.classList.add('show');
+                }
+            });
+        });
+    </script>
+
+
 </body>
 </html>
