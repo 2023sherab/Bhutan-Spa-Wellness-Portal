@@ -76,9 +76,6 @@
   padding: 0.7rem;
   border-radius: 8px;
 }
-.d-flex button{
-  border: none;
-}
 
 .navbar .btn a:hover{
   color: #E5B80B;
@@ -265,9 +262,9 @@
 }
 
 .benefits-text {
-  font-family: "Basic", sans-serif;
+  font-family:  "Belleza", sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   position: absolute;
   top: 50%;
   left: 50%;
