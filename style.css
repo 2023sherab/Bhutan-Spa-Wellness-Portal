@@ -46,35 +46,31 @@
  
 
 /* NAVBAR*/
+.navbar{
+  background-color: #FFDEB6;
+}
+
 .navbar .container-fluid{
   width: 90%;
+  background-color: #FFDEB6;
 }
 
 .navbar .btn{
   border: none;
 }
 
-.navbar{ 
-  background-color:#ffdeb6;   
-  /* padding: 2rem;  */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1020; /* Adjust based on your site's z-index context */
-}
-
 .navbar-nav{
   margin-right: 1rem;
 }
 
-#navbarSupportedContent li a{
+.nav-item a{
   font-family: "Belleza", sans-serif;    
   font-style: normal;
   font-size: 18px;
   color: #800E13;  
 }
 
-#navbarSupportedContent li a:hover{
+.nav-item a:hover{
   color:#E5B80B; /* Change this color to your desired hover color */
 }
 
@@ -87,12 +83,31 @@
   background-color: #E5B80B;
   padding: 0.7rem;
   border-radius: 8px;
+  text-decoration: none;
 }
 
 .navbar .btn a:hover{
   color: #E5B80B;
   background-color: #800E13;
 }
+
+.navbar .offcanvas{
+  background-color: #FFDEB6;
+  padding: 1rem;
+}
+
+@media (max-width: 1140px){
+  .nav-item a{
+    font-family: "Belleza", sans-serif;    
+    font-style: normal;
+    font-size: 16px;
+    color: #800E13;  
+  }
+
+ 
+}
+  
+
 /* END-NAVBAR*/
 
 
