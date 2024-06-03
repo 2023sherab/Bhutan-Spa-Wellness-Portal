@@ -23,18 +23,19 @@
 
 <body>
     <script src="./script.js" charset="UTF-8"></script>
+    
     <script src="//code.jquery.com/jquery.min.js"></script>
 
     <script type="text/javascript">
-        //<!-- start navigation -->
-        $.get("navbar.html", function(data){
+        // Load navigation and footer
+        $.get("navbar.html", function(data) {
             $("#navigation").replaceWith(data);
         });
-
-        // <!-- start footer -->
-        $.get("footer.html", function(data){
+        $.get("footer.html", function(data) {
             $("#footer").replaceWith(data);
         });
+   
+
 
 // Filter functionality
 function filterTherapists() {
@@ -73,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('therapist-location').addEventListener('change', filterTherapists);
 });
 
-    </script>
+</script>
+
+
 
     <div id="navigation"></div>
 

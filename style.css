@@ -67,11 +67,11 @@
   font-family: "Belleza", sans-serif;    
   font-style: normal;
   font-size: 18px;
-  color: #800E13;  
+  color: #800E13 !important;  
 }
 
 .nav-item a:hover{
-  color:#E5B80B; /* Change this color to your desired hover color */
+  color:#E5B80B !important; /* Change this color to your desired hover color */
 }
 
 .navbar .btn a{
@@ -96,14 +96,14 @@
   padding: 1rem;
 }
 
-@media (max-width: 1140px){
+/* @media (max-width: 1140px){
   .nav-item a{
     font-family: "Belleza", sans-serif;    
     font-style: normal;
     font-size: 16px;
     color: #800E13;  
   } 
-}
+} */
   
 
 /* END-NAVBAR*/
@@ -170,6 +170,9 @@
 
 
 /*HERO*/
+#hero-img{
+  margin-top: 5rem;
+}
  .hero {
   position: relative;
   width: 100%;
@@ -441,6 +444,7 @@
 #spaServices {
   width: 80%;
   margin: auto;
+  margin-top: 8rem;
   margin-bottom: 5rem;
 }
 .services-title{
@@ -449,8 +453,7 @@
   font-family: "Belleza", sans-serif;
   margin-bottom: 2rem;
   font-size: 40px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   }
 
 #spaServices  .service-card-header {
@@ -813,7 +816,7 @@
 
 /* Find a therapist */
 #findTherapist{
-  margin-top: 5rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
 }
 
@@ -996,7 +999,7 @@
 
 /* BE-OUR-THERAPIST */
 #beOurTherapistForm{
-  margin-top: 5rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
 }
 
@@ -1172,7 +1175,7 @@ display: flex;
 
 /* FEEDBACK-FORM */
 .feedbackForm{
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
 }
 

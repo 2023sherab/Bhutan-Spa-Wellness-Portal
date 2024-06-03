@@ -31,21 +31,23 @@
 
     <script src="./script.js" charset="UTF-8"></script>
 
+   
+    <!-- <script src="./script.js" charset="UTF-8"></script> -->
     <script src="//code.jquery.com/jquery.min.js"></script>
 
-    <script type="text/javascript">
-        //<!-- start navigation -->
-        $.get("navbar.html", function(data){
-            $("#navigation").replaceWith(data);
-        });
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navbar.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
 
-        // <!-- start footer -->
-        $.get("footer.html", function(data){
-            $("#footer").replaceWith(data);
-        });
-    </script>
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});		
+	</script>
 
-    <div id="navigation"></div>
+<div id="navigation"></div>
 
     <!-- BOOK-SPA-THERAPIST -->
 <section id="beOurTherapistForm">
