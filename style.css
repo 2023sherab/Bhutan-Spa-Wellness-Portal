@@ -436,7 +436,8 @@
   font-family: "Belleza", sans-serif;
   margin-bottom: 2rem;
   font-size: 40px;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   }
 
 #spaServices  .service-card-header {
@@ -547,7 +548,7 @@
 #detail-services {
   width: 80%;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
