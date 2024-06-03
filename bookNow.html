@@ -248,14 +248,8 @@
                 // Open WhatsApp link with prefilled message
                 var url = "https://wa.me/" + therapistWhatsAppNumber + "?text=" + encodeURIComponent(message);
 
-                // Check if it's being opened on a desktop or a web browser
-                if (navigator.platform.toUpperCase().indexOf('MAC') >= 0 || navigator.platform.toUpperCase().indexOf('WIN') >= 0) {
-                    // Open WhatsApp desktop app
-                    window.location.href = url;
-                } else {
-                    // Open WhatsApp web
-                    window.open(url, "_blank");
-                }
+                // Open WhatsApp web or app
+                window.open(url, "_blank");
             } else {
                 alert("Selected therapist does not have a WhatsApp number.");
             }
