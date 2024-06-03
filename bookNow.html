@@ -200,11 +200,22 @@
         return isValid;
     }
 
-    // Function to generate WhatsApp message
+    // Function to generate WhatsApp message with filled form data in list format
     function generateWhatsAppMessage() {
-        var therapist = document.getElementById("country").value;
-        var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
-        
+        var form = document.getElementById("bookingForm");
+        var formData = new FormData(form);
+        var message = "Hello " + formData.get("country") + ", I would like to book an appointment. Here are the details:\n\n";
+
+        formData.forEach(function(value, key) {
+            if (key !== "ageConfirmation") { // Skip the age confirmation checkbox
+                message += key.charAt(0).toUpperCase() + key.slice(1) + ": " + value + "\n";
+            }
+        });
+
+        // Add age confirmation
+        var ageConfirmation = document.getElementById("ageConfirmation").checked;
+        message += "Age Confirmation: " + (ageConfirmation ? "Yes" : "No") + "\n";
+
         return message;
     }
 
@@ -318,6 +329,13 @@
             });
         });
     });
+
+    // Add the following HTML elements to your HTML file
+    // <div id="formDataContainer" style="display: none;">
+    //     <h3>Filled Form Data:</h3>
+    //     <ul id="formDataList"></ul>
+    // </div>
 </script>
+
 </body>
 </html>
