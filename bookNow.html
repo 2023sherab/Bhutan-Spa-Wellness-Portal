@@ -203,14 +203,8 @@
     // Function to generate WhatsApp message
     function generateWhatsAppMessage() {
         var therapist = document.getElementById("country").value;
-        var message = `Hello ${therapist},\n\nI would like to book an appointment with the following details:\n
-        - Name: ${document.getElementById("firstName").value} ${document.getElementById("lastName").value}\n
-        - Email: ${document.getElementById("email").value}\n
-        - Phone Number: ${document.getElementById("phoneNumber").value}\n
-        - Treatment: ${document.getElementById("treatment").value}\n
-        - Date: ${document.getElementById("date").value}\n
-        - Time: ${document.getElementById("time").value}\n`;
-
+        var message = "Hello " + therapist + ", I would like to book an appointment for " + document.getElementById("firstName").value + " for " + document.getElementById("treatment").value + " on " + document.getElementById("date").value + " at " + document.getElementById("time").value + ".";
+        
         return message;
     }
 
@@ -325,6 +319,5 @@
         });
     });
 </script>
-
 </body>
 </html>
