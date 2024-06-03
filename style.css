@@ -96,14 +96,14 @@
   padding: 1rem;
 }
 
-/* @media (max-width: 1140px){
+@media (max-width: 1140px){
   .nav-item a{
     font-family: "Belleza", sans-serif;    
     font-style: normal;
     font-size: 16px;
     color: #800E13;  
   } 
-} */
+}
   
 
 /* END-NAVBAR*/
